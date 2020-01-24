@@ -2,11 +2,9 @@
 #include "logic-gates.c"
 
 int multiplexer(int A, int B, int SL){
-    int A_AND = -1;
-    int B_AND = -1;
-
-    A_AND = AND_gate(A, NOT_gate(SL));
-    B_AND = AND_gate(B, SL);
+    int A_AND = AND_gate(A, NOT_gate(SL));
+    int B_AND = AND_gate(B, SL);
+    
     return OR_gate(A_AND, B_AND);
 }
 
