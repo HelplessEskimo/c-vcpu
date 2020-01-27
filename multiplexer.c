@@ -34,7 +34,7 @@ ByteBlock four_input_multiplexer(ByteBlock A, ByteBlock B, ByteBlock C, ByteBloc
     return result;
 }
 
-int main(){
+/*int main(){
     ByteBlock A = EMPTY_BYTE_BLOCK();
     A.block[1] = 1;
     ByteBlock B = EMPTY_BYTE_BLOCK();
@@ -43,4 +43,4 @@ int main(){
     ByteBlock result = multiplexer_eight_bit(A, B, SL);
     print_byteblock(result);
     return 0;
-}
+}*/
