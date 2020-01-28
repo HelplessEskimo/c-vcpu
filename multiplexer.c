@@ -1,5 +1,4 @@
 #include "multiplexer.h"
-#include "logic-gates.c"
 
 int multiplexer(int A, int B, int SL){
     int A_AND = AND_gate(A, NOT_gate(SL));

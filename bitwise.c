@@ -1,4 +1,3 @@
-#include "logic-gates.c"
 #include "bitwise.h"
 
 ByteBlock bitwise_XOR(ByteBlock A, int EN){

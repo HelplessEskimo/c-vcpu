@@ -1,5 +1,4 @@
 #include "adders.h"
-#include "logic-gates.c"
 
 HalfAdder halfadder(int A, int B){
     HalfAdder output;
