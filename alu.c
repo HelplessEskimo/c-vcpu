@@ -1,8 +1,4 @@
 #include "alu.h"
-#include "logic-gates.c"
-#include "multiplexer.c"
-#include "bitwise.c"
-#include "adders.c"
 
 ALUOUT ALU(ByteBlock A, ByteBlock B, int s0, int s1, int s2, int s3, int s4){
     ALUOUT output;
@@ -15,6 +11,9 @@ ALUOUT ALU(ByteBlock A, ByteBlock B, int s0, int s1, int s2, int s3, int s4){
 }
 
 int main(){
+    WordBlock w = EMPTY_WORD_BLOCK();
+    print_wordblock(w);
+    printf("\n\n");
     ByteBlock A = EMPTY_BYTE_BLOCK();
     A.block[1] = 1;
     A.block[2] = 1;
@@ -23,6 +22,8 @@ int main(){
     B.block[5] = 1;
     B.block[4] = 1;
     B.block[7] = 1; //00001101
+    print_byteblock(A);
+    print_byteblock(B);
     ALUOUT ALUout = ALU(A, B, 0, 0, 1, 1, 0);
 
     print_byteblock(ALUout.sum);
