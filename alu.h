@@ -4,13 +4,12 @@
 #include "adders.h"
 #include "bitwise.h"
 #include "multiplexer.h"
+#include "utils.h"
 
-typedef struct alu
-{
-    int cout;
-    ByteBlock sum;
-
-}ALUOUT;
+#include "logic-gates.c"
+#include "multiplexer.c"
+#include "bitwise.c"
+#include "adders.c"
 
 
 ALUOUT ALU(ByteBlock A, ByteBlock B, int s0, int s1, int s2, int s3, int s4);
