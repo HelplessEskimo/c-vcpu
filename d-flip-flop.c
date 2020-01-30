@@ -7,4 +7,3 @@ Latch d_flip_flop(int D){
     result.invq = NOT_gate(D);
     return result;
 }
-
