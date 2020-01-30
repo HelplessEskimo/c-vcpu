@@ -2,6 +2,7 @@
 #define UTILS_H
 #include <stdio.h>
 
+
 typedef struct BBlock{
     int block[8];
     int length;
@@ -102,6 +103,14 @@ typedef struct alu
     ByteBlock sum;
 
 }ALUOUT;
+
+
+typedef struct latch
+{
+    int q;
+    int invq;
+}Latch;
+
 
 
 ByteBlock EMPTY_BYTE_BLOCK(void);
