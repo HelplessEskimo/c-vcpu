@@ -1,0 +1,1 @@
+void clock(int delay);
