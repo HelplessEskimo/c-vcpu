@@ -14,7 +14,7 @@ void clock(int delay){
     #endif
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     clock(1000);
     return 0;
