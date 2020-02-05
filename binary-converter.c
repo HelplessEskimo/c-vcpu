@@ -27,15 +27,3 @@ ByteBlock decimal_to_binary(int a){
     
     return n;
 }
-
-int main(){
-    ByteBlock A = EMPTY_BYTE_BLOCK();
-    A.block[7] = 1;
-    A.block[6] = 1;
-    int output = eight_bit_to_decimal(A);
-    printf("%d\n", output);
-
-    ByteBlock out = decimal_to_binary(3);
-    print_byteblock(out);
-    return 0;
-}
