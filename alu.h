@@ -5,11 +5,13 @@
 #include "bitwise.h"
 #include "multiplexer.h"
 #include "utils.h"
+#include "binary-converter.h"
 
 #include "logic-gates.c"
 #include "multiplexer.c"
 #include "bitwise.c"
 #include "adders.c"
+#include "binary-converter.c"
 
 
 ALUOUT ALU(ByteBlock A, ByteBlock B, int s0, int s1, int s2, int s3, int s4);
