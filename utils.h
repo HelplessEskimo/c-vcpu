@@ -1,6 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 #include <stdio.h>
+#include "logic-gates.h"
 
 
 typedef struct BBlock{
@@ -27,17 +28,17 @@ void print_byteblock(ByteBlock b){
 }
 
 typedef struct WBlock{
-    ByteBlock byte[8];
+    ByteBlock byte[3];
     int length;
 }WordBlock;
 
 WordBlock EMPTY_WORD_BLOCK(void){
     int i;
     WordBlock w;
-    for (i = 0; i < 8; i++){
+    for (i = 0; i < 3; i++){
         w.byte[i] = EMPTY_BYTE_BLOCK();
     }
-    w.length = 8;
+    w.length = 3;
     return w;
 }
 
