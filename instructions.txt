@@ -1,0 +1,43 @@
+    lda     00000001 00000001 XXXXXXXX  -   Load a RAM register into the A register     - (LDA 0x15)
+    ldb     00000010 00000010 XXXXXXXX  -   Load a RAM register into the B register     - (LDB 0x15)
+    
+    sta     00000011 00000001 XXXXXXXX  -   Store a value from the A register into RAM  - (STA 0x15)
+    stb     00000100 00000010 XXXXXXXX  -   Store a value from the B register into RAM  - (STB 0x15)
+    
+    add     00000101 KKKKKKKK XXXXXXXX  -   Add a constant to a RAM register            - (ADD 1 0x15)  //two cycle instruction
+    ada     00000110 00000001 XXXXXXXX  -   Add a constant to the A register            - (ADA 1)
+    adb     00000111 00000010 XXXXXXXX  -   Add a constant to the B register            - (ADB 1)
+    
+    sub     00001000 KKKKKKKK XXXXXXXX  -   Subtract a constant from a RAM register     - (SUB 1 0x15)  //two cycle instruction
+    sba     00001001 00000001 XXXXXXXX  -   Subtract a constant from the A register     - (SBA 1)
+    sbb     00001010 00000010 XXXXXXXX  -   Subtract a constant from the A register     - (SBB 1)
+    
+    mul     00001011 KKKKKKKK XXXXXXXX  -   Multiply a RAM register with a constant     - (MUL 2 0x15)  //two cycle instruction
+    mua     00001100 00000001 XXXXXXXX  -   Multiply the A register with a constant     - (MUA 2)
+    mub     00001101 00000010 XXXXXXXX  -   Multiply the B register with a constant     - (MUB 2)
+    
+    div     00001110 KKKKKKKK XXXXXXXX  -   Divide a RAM register by a constant         - (DIV 2 0x15)  //two cycle instruction
+    dia     00001111 00000001 XXXXXXXX  -   Divide the A register by a constant         - (DIA 2)
+    dib     00010000 00000010 XXXXXXXX  -   Divide the B register by a constant         - (DIB 2)
+    
+    and     00010001 KKKKKKKK XXXXXXXX  -   And two RAM registers                       - (AND 0x15 0x16)  //three cycle instruction
+    ana     00010010 00000001 XXXXXXXX  -   And the A register with a RAM register      - (ANA 0x15)
+    anb     00010011 00000010 XXXXXXXX  -   And the B register with a RAM register      - (ANB 0x15)
+    
+    jmp     00010100 00000000 XXXXXXXX  -   Jump to a register                          - (JMP 0x15)
+    jmz     00010101 KKKKKK00 XXXXXXXX  -   Jump to a register if zero                  - (JMZ 0x15)
+    jmc     00010110 KKKKKK10 XXXXXXXX  -   Jump to a register if carry                 - (JMC 0x15)
+    jnz     00010111 KKKKKK01 XXXXXXXX  -   Jump to a register if no zero               - (JNZ 0x15)
+    jnc     00011000 KKKKKK11 XXXXXXXX  -   Jump to a register if no carry              - (JNC 0x15)
+    
+    cpa     00011001 00000001 00000010  -   Copy the A register into the B register     - (CPA)
+    cpb     00011010 00000010 00000001  -   Copy the B register into the A register     - (CPB)
+    
+    ila     00011011 00000000 00000000  -   Load the IR into the A register             - (ILA)
+    ila     00011100 00000000 00000000  -   Load the IR into the B register             - (ILB)
+    
+    isa     00011101 00000000 00000000  -   Store the A register into the IR            - (ISA)
+    isb     00011110 00000000 00000000  -   Store the B register into the IR            - (ISB)
+    
+    iri     00011111 00000000 00000000  -   Increment the IR by 1                       - (IRI)
+    hlt     00000000 00000000 00000000  -   CPU Halt                                    - (HLT)

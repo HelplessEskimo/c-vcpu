@@ -41,17 +41,12 @@ WordBlock EMPTY_WORD_BLOCK(void){
     return w;
 }
 
-WordBlock WORD_FROM_BYTES(ByteBlock A, ByteBlock B, ByteBlock C, ByteBlock D, ByteBlock E, ByteBlock F, ByteBlock G, ByteBlock H){
+WordBlock WORD_FROM_BYTES(ByteBlock A, ByteBlock B, ByteBlock C){
     WordBlock w;
     w.byte[0] = A;
     w.byte[1] = B;
     w.byte[2] = C;
-    w.byte[3] = D;
-    w.byte[4] = E;
-    w.byte[5] = F;
-    w.byte[6] = G;
-    w.byte[7] = H;
-    w.length = 8;
+    w.length = 3;
     return w;
 }
 
@@ -142,7 +137,7 @@ ByteLatch BYTE_LATCH_FROM_BYTE_BLOCK(ByteBlock A){
 ByteBlock EMPTY_BYTE_BLOCK(void);
 void print_byteblock(ByteBlock b);
 WordBlock EMPTY_WORD_BLOCK(void);
-WordBlock WORD_FROM_BYTES(ByteBlock A, ByteBlock B, ByteBlock C, ByteBlock D, ByteBlock E, ByteBlock F, ByteBlock G, ByteBlock H);
+WordBlock WORD_FROM_BYTES(ByteBlock A, ByteBlock B, ByteBlock C);
 ByteBlock BYTE_FROM_WORD(WordBlock w, int index);
 void print_wordblock(WordBlock w);
 ByteLatch EMPTY_BYTE_LATCH(void);
