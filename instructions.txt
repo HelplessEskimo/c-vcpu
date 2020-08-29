@@ -40,4 +40,7 @@
     isb     00011110 00000000 00000000  -   Store the B register into the IR            - (ISB)
     
     iri     00011111 00000000 00000000  -   Increment the IR by 1                       - (IRI)
+    acc     00100000 00000000 00000000  -   Increment the Accumlutator by 1             - (ACC)
+    prc     00100001 00000000 00000000  -   Increment the Program Counter by 1          - (PRC)
+
     hlt     00000000 00000000 00000000  -   CPU Halt                                    - (HLT)
